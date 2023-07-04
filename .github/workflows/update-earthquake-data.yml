@@ -6,19 +6,19 @@ on:
   workflow_dispatch:
     inputs:
       deploy:
-        description: 'Deploy'
+        description: 'Update'
         required: true
-        default: 'Deploy'
+        default: 'Update'
         type: choice
         options:
-        - Deploy
+        - Update
   
 jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy
+      - name: Update
         uses: wei/curl@v1
         with:
           args: -X POST ${{secrets.DEPLOY_URL}}
