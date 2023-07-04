@@ -10,8 +10,8 @@
 			{% for entry in rss['entries'] %}
 			<div class="card m-3">
 				<div class="card-body">
-					<h5 class="card-title">{{entry['title'].encode().decode('unicode_escape')}}</h5>
-					{{entry['description'].encode().decode('unicode_escape')}}
+					<h5 class="card-title">{{entry['title']}}</h5>
+					{{entry['description']}}
 				</div>
 			</div>
 			{% endfor %}
