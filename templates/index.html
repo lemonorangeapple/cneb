@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../static/bootstrap.min.css">
+		<script src="../static/jquery.slim.min.js"></script>
+		<script src="../static/bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+		<div>
+			{% for entry in rss['entries'] %}
+			<div class="card m-3">
+				<div class="card-body">
+					<h5 class="card-title">{{entry['title'].encode().decode('unicode_escape')}}</h5>
+					{{entry['description'].encode().decode('unicode_escape')}}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>
