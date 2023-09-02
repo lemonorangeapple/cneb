@@ -12,6 +12,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{ entry['title'] }}</h5>
 					{{ entry['description']|safe }}
+					<a href="{{ entry['link'] }}">官方报道</a>
 				</div>
 			</div>
 			{% endfor %}
